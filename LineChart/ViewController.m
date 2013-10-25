@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "LineChartView.h"
+#import "LineChartDemoSource.h"
 
 @interface ViewController ()
 
@@ -16,9 +18,23 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
+  CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+  LineChartView *chartView = [[LineChartView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                             applicationFrame.origin.y,
+                                                                             320.0f,
+                                                                             200.0f)];
+  chartView.source = [[LineChartDemoSource alloc] init];
+  [self.view addSubview:chartView];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

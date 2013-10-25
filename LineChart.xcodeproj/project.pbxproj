@@ -13,7 +13,6 @@
 		72603D0D1818C8F900839987 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72603D0B1818C8F900839987 /* InfoPlist.strings */; };
 		72603D0F1818C8F900839987 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72603D0E1818C8F900839987 /* main.m */; };
 		72603D131818C8F900839987 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72603D121818C8F900839987 /* AppDelegate.m */; };
-		72603D161818C8F900839987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72603D141818C8F900839987 /* Main.storyboard */; };
 		72603D191818C8F900839987 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72603D181818C8F900839987 /* ViewController.m */; };
 		72603D1B1818C8F900839987 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72603D1A1818C8F900839987 /* Images.xcassets */; };
 		72603D221818C8F900839987 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72603D211818C8F900839987 /* XCTest.framework */; };
@@ -21,6 +20,8 @@
 		72603D241818C8F900839987 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72603D061818C8F900839987 /* UIKit.framework */; };
 		72603D2C1818C8F900839987 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72603D2A1818C8F900839987 /* InfoPlist.strings */; };
 		72603D2E1818C8F900839987 /* LineChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72603D2D1818C8F900839987 /* LineChartTests.m */; };
+		72603D3A1818CD8B00839987 /* LineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72603D391818CD8B00839987 /* LineChartView.m */; };
+		72603D3D181908D700839987 /* LineChartDemoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 72603D3C181908D700839987 /* LineChartDemoSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		72603D101818C8F900839987 /* LineChart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LineChart-Prefix.pch"; sourceTree = "<group>"; };
 		72603D111818C8F900839987 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72603D121818C8F900839987 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		72603D151818C8F900839987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72603D171818C8F900839987 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		72603D181818C8F900839987 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		72603D1A1818C8F900839987 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +53,10 @@
 		72603D291818C8F900839987 /* LineChartTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LineChartTests-Info.plist"; sourceTree = "<group>"; };
 		72603D2B1818C8F900839987 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		72603D2D1818C8F900839987 /* LineChartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartTests.m; sourceTree = "<group>"; };
+		72603D381818CD8B00839987 /* LineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChartView.h; sourceTree = "<group>"; };
+		72603D391818CD8B00839987 /* LineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartView.m; sourceTree = "<group>"; };
+		72603D3B181908D700839987 /* LineChartDemoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineChartDemoSource.h; path = LineChart/LineChartDemoSource.h; sourceTree = SOURCE_ROOT; };
+		72603D3C181908D700839987 /* LineChartDemoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineChartDemoSource.m; path = LineChart/LineChartDemoSource.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		72603CF61818C8F900839987 = {
 			isa = PBXGroup;
 			children = (
+				72603D371818CD5000839987 /* Chart */,
 				72603D081818C8F900839987 /* LineChart */,
 				72603D271818C8F900839987 /* LineChartTests */,
 				72603D011818C8F900839987 /* Frameworks */,
@@ -114,11 +119,12 @@
 			children = (
 				72603D111818C8F900839987 /* AppDelegate.h */,
 				72603D121818C8F900839987 /* AppDelegate.m */,
-				72603D141818C8F900839987 /* Main.storyboard */,
 				72603D171818C8F900839987 /* ViewController.h */,
 				72603D181818C8F900839987 /* ViewController.m */,
 				72603D1A1818C8F900839987 /* Images.xcassets */,
 				72603D091818C8F900839987 /* Supporting Files */,
+				72603D3B181908D700839987 /* LineChartDemoSource.h */,
+				72603D3C181908D700839987 /* LineChartDemoSource.m */,
 			);
 			path = LineChart;
 			sourceTree = "<group>";
@@ -150,6 +156,15 @@
 				72603D2A1818C8F900839987 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72603D371818CD5000839987 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				72603D381818CD8B00839987 /* LineChartView.h */,
+				72603D391818CD8B00839987 /* LineChartView.m */,
+			);
+			path = Chart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +245,6 @@
 			files = (
 				72603D1B1818C8F900839987 /* Images.xcassets in Resources */,
 				72603D0D1818C8F900839987 /* InfoPlist.strings in Resources */,
-				72603D161818C8F900839987 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +265,9 @@
 			files = (
 				72603D191818C8F900839987 /* ViewController.m in Sources */,
 				72603D131818C8F900839987 /* AppDelegate.m in Sources */,
+				72603D3D181908D700839987 /* LineChartDemoSource.m in Sources */,
 				72603D0F1818C8F900839987 /* main.m in Sources */,
+				72603D3A1818CD8B00839987 /* LineChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,14 +296,6 @@
 				72603D0C1818C8F900839987 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		72603D141818C8F900839987 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72603D151818C8F900839987 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		72603D2A1818C8F900839987 /* InfoPlist.strings */ = {
